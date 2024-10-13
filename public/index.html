@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+    <title>weatherReport</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="output.css" rel="stylesheet"/>
+</head>
+<body class="bg-black">
+<div class="mt-8 mb-16">
+    <div class="flex text-amber-200 justify-center items-center ">
+        <h1 class="text-[50px] font-bold text-lg">Weather Report</h1>
+    </div>
+</div>
+<div class="flex flex-col items-center justify-center gap-6 ">
+    <div class="flex gap-4">
+         <label>
+            <input class="p-4 rounded-lg hover:shadow-indigo-600 text-black font-bold text-md" type="text" placeholder="enter city">
+         </label>
+        <button onclick="getWeather()" class="bg-white text-black font-bold cursor-pointer text-md rounded-lg hover:shadow-indigo-600 px-4">search</button>
+        <img alt="" src=""/>
+        <div id="temp-div"> </div>
+        <div id="weather-info"> </div>
+        <div id="hourly-forecast"> </div>
+    </div>
+</div>
+</body>
+</html>
