@@ -8,22 +8,20 @@
     <link href="output.css" rel="stylesheet"/>
 </head>
 <body class="bg-black">
-<div class="mt-8 mb-16">
-    <div class="flex text-amber-200 justify-center items-center ">
-        <h1 class="text-[50px] font-bold text-lg">Weather Report</h1>
-    </div>
+<div class="mt-8 mb-16 flex justify-center items-center text-amber-200">
+        <h1 class="text-[50px] font-bold text-lg">Weather Report of India country</h1>
 </div>
-<div class="flex flex-col items-center justify-center gap-6 ">
-    <div class="flex gap-4">
+<div>
+    <div class="flex flex-col gap-7 items-center justify-center">
          <label>
-            <input class="p-4 rounded-lg hover:shadow-indigo-600 text-black font-bold text-md" type="text" placeholder="enter city">
+            <input id="city" class="p-2 rounded-lg hover:shadow-indigo-600 text-black font-bold text-md" type="text" placeholder="enter city">
          </label>
-        <button onclick="getWeather()" class="bg-white text-black font-bold cursor-pointer text-md rounded-lg hover:shadow-indigo-600 px-4">search</button>
-        <img alt="" src=""/>
-        <div id="temp-div"> </div>
-        <div id="weather-info"> </div>
-        <div id="hourly-forecast"> </div>
+        <button onclick="getWeather()" class="bg-white text-black font-bold cursor-pointer text-md rounded-2xl w-20 align-middle hover:shadow-indigo-600 ">search</button>
+        <div class="text-amber-200 font-bold text-md text-center" id="temp-div"> </div>
+        <div class="text-amber-200 font-bold text-md text-center" id="weather-info"> </div>
+        <div id="hourly-forecast" class="text-amber-200 font-bold text-md text-center"> </div>
     </div>
 </div>
+<script src="./index.js"></script>
 </body>
 </html>
