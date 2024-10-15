@@ -11,15 +11,15 @@
         const cityName=data.name;
         const description =data.weather[0].description;
 
-
-        const temperatureHtml=`<p>${temperature}<sup>o</sup>C</p>`;
+        const imageHtml=`<img src="../weatherpng.jpg" class="w-64 h-40" alt="weather img"/>`
+        const temperatureHtml=`<p class="text-md">Temperature : ${temperature}<sup>o</sup>C</p>`;
         const weatherHtml=`<p>${cityName}</p> <p>${description}</p>`;
 
+         image.innerHTML=imageHtml;
          tempDivInfo.innerHTML=`${temperatureHtml}`;
          weatherInfoDiv.innerHTML=`${weatherHtml}`;
     }
 }
-
  async function getWeather(){
     const apikey='77dc043334af42c9e09833f619c9a052';
     const city=document.getElementById('city').value;
