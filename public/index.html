@@ -13,12 +13,13 @@
     </div>
     <div class="flex flex-col gap-7 items-center justify-center p-14">
          <label>
-            <input id="city" class="p-2 rounded-lg hover:shadow-indigo-600 text-black font-bold text-md" type="text" placeholder="enter city">
+            <input id="city" class="p-4 rounded-lg bg-gray-700 text-white font-bold text-md decoration-0" type="text" placeholder="enter city">
          </label>
-        <button onclick="getWeather()" class="bg-black text-white font-bold cursor-pointer text-md rounded-2xl w-20 align-middle hover:shadow-indigo-600 ">search</button>
+        <button onclick="getWeather()" class="bg-gray-700 text-white font-bold cursor-pointer  rounded-2xl w-20 p-2 tracking-wide">search</button>
         <div id="image"></div>
         <div class="text-amber-200 font-bold text-md text-center text-[35px]" id="temp-div"> </div>
-        <div class="text-amber-200 font-bold text-md text-center text-[30px]" id="weather-info"> </div>
+        <div class="text-amber-200 font-bold text-md text-center text-[25px]" id="weather-info"> </div>
+         <div class="text-amber-200 font-bold text-md text-center text-[20px]" id="wind-speed"> </div>
     </div>
 <script src="./index.js"></script>
 </body>

@@ -2,6 +2,8 @@
     const tempDivInfo=document.getElementById('temp-div');
     const weatherInfoDiv=document.getElementById('weather-info');
     const image=document.getElementById('image');
+    const windSpeed=document.getElementById('wind-speed');
+
 
     if(data.code === '404'){
         weatherInfoDiv.innerHTML=`<p>${data.message}</p>`
@@ -10,11 +12,17 @@
         const temperature=Math.round(data.main.temp - 273.15);
         const cityName=data.name;
         const description =data.weather[0].description;
+        const windData=data.wind.speed;
+        const couData=data.sys.country;
 
+
+        const windHtml=`<p>Wind Speed : ${windData}</p>`;
         const imageHtml=`<img src="../weatherpng.jpg" class="w-64 h-40" alt="weather img"/>`
         const temperatureHtml=`<p class="text-md">Temperature : ${temperature}<sup>o</sup>C</p>`;
-        const weatherHtml=`<p>${cityName}</p> <p>${description}</p>`;
+        const weatherHtml=`<p>${cityName},${couData}</p> <p>${description}</p>`;
 
+
+         windSpeed.innerHTML=windHtml;
          image.innerHTML=imageHtml;
          tempDivInfo.innerHTML=`${temperatureHtml}`;
          weatherInfoDiv.innerHTML=`${weatherHtml}`;
@@ -32,6 +40,7 @@
         .then(response => response.json())
         .then(data=>{
             displayWeather(data);
+             console.log(data)
         })
         .catch(error=>{
             console.error('Error fetching weather',error);
