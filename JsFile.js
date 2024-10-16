@@ -17,7 +17,7 @@
 
 
         const windHtml=`<p>Wind Speed : ${windData}</p>`;
-        const imageHtml=`<img src="weatherpng.jpg" class="w-64 h-40" alt="image not found"/>`
+        const imageHtml=`<img src="./weatherpng.jpg" class="w-64 h-40" alt="image not found"/>`
         const temperatureHtml=`<p class="text-md">Temperature : ${temperature}<sup>o</sup>C</p>`;
         const weatherHtml=`<p>${cityName},${couData}</p> <p>${description}</p>`;
 
